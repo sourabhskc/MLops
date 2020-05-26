@@ -1,4 +1,5 @@
 import pandas as pd
+
 dataset = pd.read_csv('Churn_Modelling.csv')
 y = dataset['Exited']
 X = dataset[['CreditScore', 'Age', 'Tenure', 'Balance', 'NumOfProducts', 'HasCrCard',
