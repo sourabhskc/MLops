@@ -18,6 +18,7 @@ from keras.layers import Dense
 model.add(Dense(units=6, input_dim=11, activation='relu' ))
 model.add(Dense(units=64, activation="relu"))
 model.add(Dense(units=64, activation="relu"))
+model.add(Dense(units=64, activation="relu"))
 model.add(Dense(units=1,  activation='sigmoid' ))
 model.compile(optimizer=Adam(learning_rate=0.001),loss='binary_crossentropy' , metrics=['accuracy'])
 model.fit(X_train,y_train , epochs=30, validation_data=(X_test, y_test) )
