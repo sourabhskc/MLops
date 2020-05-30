@@ -25,8 +25,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random
 model = Sequential()
 model.add(Dense(units=6, input_dim=11, activation='relu' ))
 model.add(Dense(units=64, activation="relu"))
-model.add(Dense(units=64, activation="relu"))
-model.add(Dense(units=64, activation="relu"))
 model.add(Dense(units=1,  activation='sigmoid' ))
 
 # model summary 
