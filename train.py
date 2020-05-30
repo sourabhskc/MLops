@@ -1,6 +1,6 @@
 import pandas as pd
 
-dataset = pd.read_csv('Churn_Modelling.csv')
+dataset = pd.read_csv('/taskCode/Churn_Modelling.csv')
 y = dataset['Exited']
 X = dataset[['CreditScore', 'Age', 'Tenure', 'Balance', 'NumOfProducts', 'HasCrCard',
        'IsActiveMember', 'EstimatedSalary']]
@@ -26,10 +26,10 @@ accuracy = model.evaluate(X_test, y_test, verbose=0)
 acc=accuracy[1]*100
 print(acc)
 #save the accuracy in a file 
-f = open("accuracy.txt",'w+')
+f = open("/taskCode/accuracy.txt",'w+')
 f.write(str(acc))
 f.close()
-model.save('ann.h5')
+model.save('/taskCode/ann.h5')
 
 
 
