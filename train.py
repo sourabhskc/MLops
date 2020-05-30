@@ -36,7 +36,8 @@ model.summary()
 model.compile(optimizer=Adam(learning_rate=0.001),loss='binary_crossentropy' , metrics=['accuracy'])
 
 #train the model
-model.fit(X_train,y_train , epochs=30, validation_data=(X_test, y_test) )
+ep=30
+model.fit(X_train,y_train , epochs=ep, validation_data=(X_test, y_test) )
 
 #get the model accuracy
 accuracy = model.evaluate(X_test, y_test, verbose=0)
