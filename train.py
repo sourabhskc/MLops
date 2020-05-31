@@ -40,6 +40,7 @@ model.fit(X_train,y_train , epochs=ep, validation_data=(X_test, y_test) )
 #get the model accuracy
 accuracy = model.evaluate(X_test, y_test, verbose=0)
 acc=accuracy[1]*100
+acc=int(acc)
 print(acc)
 
 #save the accuracy in a file 
